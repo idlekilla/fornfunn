@@ -21,6 +21,16 @@
 
   <link rel="canonical" href="https://fornfunn.no/" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Egen presentasjon av Funnpotensial, uten endringer i eksisterende styles.css */
+    .potential-highlight { margin-top: 48px; padding: clamp(24px, 4vw, 48px); border: 1px solid rgba(137, 157, 124, .28); border-radius: 24px; background: linear-gradient(135deg, rgba(110, 140, 90, .13), rgba(110, 140, 90, .035)); }
+    .potential-highlight .eyebrow { margin-bottom: 10px; }
+    .potential-highlight h3 { margin: 0 0 18px; font-size: clamp(1.55rem, 2.7vw, 2.25rem); line-height: 1.2; }
+    .potential-highlight p { max-width: 850px; line-height: 1.75; }
+    .potential-points { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+    .potential-points span { padding: 9px 14px; border: 1px solid rgba(137, 157, 124, .35); border-radius: 999px; font-size: .9rem; }
+    @media (max-width: 600px) { .potential-highlight { margin-top: 28px; border-radius: 18px; } }
+  </style>
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="nb_NO" />
@@ -63,7 +73,8 @@
       "https://fornfunn.no/assets/hjem-feltstatistikk.png",
       "https://fornfunn.no/assets/fornfunnskjema.png",
       "https://fornfunn.no/assets/feltkart-satellitt.png",
-      "https://fornfunn.no/assets/funnkart-norge.png"
+      "https://fornfunn.no/assets/funnkart-norge.png",
+      "https://fornfunn.no/assets/potensial.png"
     ],
     "featureList": [
       "Registrering og dokumentasjon av funn",
@@ -74,7 +85,8 @@
       "Visning av registrerte kulturminner",
       "Sporlogging under feltarbeid",
       "Funnkart og feltstatistikk",
-      "Lagring av bilder og posisjoner"
+      "Lagring av bilder og posisjoner",
+      "Funnpotensial med områdeanalyse av historiske og geografiske forhold"
     ],
     "offers": {
   "@type": "Offer",
@@ -233,6 +245,29 @@
           <p>Hold kontroll på funn, grunneiere og sporlogger direkte fra startsiden.</p>
         </article>
       </div>
+
+      <article class="potential-highlight" aria-labelledby="potential-heading">
+        <p class="eyebrow">Utforsk området før du søker</p>
+        <h3 id="potential-heading">Funnpotensial – la historien og landskapet vise vei</h3>
+        <p>
+          Hvor er det størst sjanse for å finne spor fra fortiden? Med Funnpotensial kan du
+          undersøke et område direkte fra feltkartet. Fornfunn vurderer historiske og
+          geografiske forhold i nærheten av et valgt punkt og gir en veiledende
+          prosentvis vurdering av funnpotensialet.
+        </p>
+        <p>
+          Analysen ser blant annet på registrerte kulturminner, løsfunn, steds- og gårdsnavn,
+          terreng, jordbruksarealer og nærheten til gamle ferdselsårer, vassdrag og bosetning.
+          Resultatet deles i <strong>eldre funn</strong> og <strong>nyere funn</strong>, slik at du får
+          et ekstra verktøy for å planlegge søket og oppdage interessante områder.
+        </p>
+        <p><small>Vurderingen er en beregnet indikasjon, ikke en garanti for funn eller en vurdering av hvor det er lov å søke.</small></p>
+        <div class="potential-points" aria-label="Hovedegenskaper">
+          <span>Analyse fra kartet</span>
+          <span>Eldre og nyere funn</span>
+          <span>Historiske og geografiske data</span>
+        </div>
+      </article>
     </section>
 
     <section class="showcase section-pad" id="bilder">
@@ -279,6 +314,14 @@
           <div>
             <h3>Kombiner</h3>
             <p>Kombiner ulike kart med ulike overlays.</p>
+          </div>
+        </article>
+
+        <article class="screenshot-card">
+          <img src="assets/potensial.png" alt="Funnpotensial i Fornfunn med områdeanalyse for eldre og nyere funn" loading="lazy" />
+          <div>
+            <h3>Funnpotensial</h3>
+            <p>Utforsk områdets potensial for eldre og nyere funn basert på historiske og geografiske forhold.</p>
           </div>
         </article>
       </div>
